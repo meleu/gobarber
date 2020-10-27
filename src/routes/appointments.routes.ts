@@ -20,7 +20,7 @@ appointmentsRouter.post('/', (request, response) => {
     const parsedDate = parseISO(date);
 
     const createAppointment = new CreateAppointmentService(
-      appointmentsRepository,
+      appointmentsRepository
     );
 
     const appointment = createAppointment.execute({
